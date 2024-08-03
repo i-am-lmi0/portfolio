@@ -1,0 +1,22 @@
+{
+  "name": "arnav-coding",
+  "version": "1.0.0",
+  "description": "This repository is for a coding portfolio for me.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-am-lmi0/portfolio.git"
+  },
+  "author": "Arnav Somaghatta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/i-am-lmi0/portfolio/issues"
+  },
+  "homepage": "https://github.com/i-am-lmi0/portfolio#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
