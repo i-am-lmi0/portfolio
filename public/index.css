@@ -53,6 +53,7 @@ body {
   z-index: 1000;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .navbar a {
@@ -62,6 +63,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
+  line-height: 1.2;
 }
 
 .navbar a:hover {
@@ -91,28 +93,4 @@ body {
 ul {
   list-style: none;
   padding: 0;
-}
-
-.github-button {
-  margin-left: 10px;
-  padding: 10px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s;
-}
-
-.github-button img {
-  width: 30px;
-  height: 30px;
-}
-
-.github-button:hover {
-  background-color: #ffffff;
-}
-
-.github-button:hover img {
-  filter: invert(1);
 }
