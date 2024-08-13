@@ -52,8 +52,20 @@ body {
   padding: 10px 0;
   z-index: 1000;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between; /* Align left and right buttons */
+  align-items: center; /* Vertically center the buttons */
+}
+
+.left-buttons, .right-buttons {
+  display: flex;
+}
+
+.left-buttons {
+  margin-left: 20px; /* Optional: Add some margin to the left */
+}
+
+.right-buttons {
+  margin-right: 20px; /* Optional: Add some margin to the right */
 }
 
 .navbar a {
@@ -63,7 +75,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
-  line-height: 1.2;
+  line-height: 1.2; /* Adjust the line height for vertical centering */
 }
 
 .navbar a:hover {
