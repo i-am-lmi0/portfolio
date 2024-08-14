@@ -100,8 +100,9 @@ body {
 }
 
 .link {
-  color: #ffffff
+  color: #ffffff;
   text-decoration: underline;
+  text-decoration-color: purple;
 }
 
 .button:hover {
