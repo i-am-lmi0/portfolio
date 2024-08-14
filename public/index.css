@@ -52,8 +52,8 @@ body {
   padding: 10px 0;
   z-index: 1000;
   display: flex;
-  justify-content: space-between; /* Align left and right buttons */
-  align-items: center; /* Vertically center the buttons */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .left-buttons, .right-buttons {
@@ -61,11 +61,11 @@ body {
 }
 
 .left-buttons {
-  margin-left: 20px; /* Optional: Add some margin to the left */
+  margin-left: 20px;
 }
 
 .right-buttons {
-  margin-right: 20px; /* Optional: Add some margin to the right */
+  margin-right: 20px;
 }
 
 .navbar a {
@@ -75,7 +75,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
-  line-height: 1.2; /* Adjust the line height for vertical centering */
+  line-height: 1.2;
 }
 
 .navbar a:hover {
