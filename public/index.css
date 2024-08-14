@@ -99,6 +99,11 @@ body {
   position: relative;
 }
 
+.link {
+  color: #ffffff
+  text-decoration: underline;
+}
+
 .button:hover {
   background-color: #ffffff;
   color: black;
