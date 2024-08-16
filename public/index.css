@@ -103,11 +103,18 @@ body {
   background-color: #ffffff;
   color: black;
 }
+
 .link {
   color: #ffffff;
   text-decoration: underline;
   text-decoration-color: white;
   background-color: transparent;
+  transition: color 0.3s, text-decoration-color 0.3s;
+}
+
+.link:hover {
+  color: purple;
+  text-decoration-color: purple;
 }
 
 ul {
