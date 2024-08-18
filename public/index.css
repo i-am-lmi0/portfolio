@@ -42,7 +42,7 @@ body {
   color: #ffffff;
 }
 
-.navbar {
+.left-navbar {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
@@ -64,7 +64,7 @@ body {
   margin-left: 20px;
 }
 
-.navbar a {
+.left-navbar a {
   display: inline-block;
   color: #ffffff;
   text-align: center;
@@ -75,7 +75,7 @@ body {
   line-height: 1.2;
 }
 
-.navbar a:hover {
+.left-navbar a:hover {
   background: #ddd;
   color: black;
 }
