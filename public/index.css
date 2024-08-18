@@ -64,10 +64,6 @@ body {
   margin-left: 20px;
 }
 
-.right-buttons {
-  margin-right: 20px;
-}
-
 .navbar a {
   display: inline-block;
   color: #ffffff;
@@ -102,6 +98,10 @@ body {
 .button:hover {
   background-color: #ffffff;
   color: black;
+}
+
+.link-navbar {
+  margin-right: 20px;
 }
 
 .link {
