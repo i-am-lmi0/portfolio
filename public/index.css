@@ -121,12 +121,3 @@ ul {
   list-style: none;
   padding: 0;
 }
-
-.redirect-icon {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  width: 15px;
-  height: 15px;
-  pointer-events: none;
-}
