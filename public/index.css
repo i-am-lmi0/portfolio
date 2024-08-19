@@ -151,6 +151,9 @@ body {
   text-decoration-color: white;
   background-color: transparent;
   transition: color 0.3s, text-decoration-color 0.3s;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 15px 32px;
 }
 
 .link:hover {
