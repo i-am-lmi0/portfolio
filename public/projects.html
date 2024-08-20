@@ -48,9 +48,31 @@
   </div>
   <div class="container">
     <script type="py" terminal>
-        from pyscript import display
-        display("Hello World!")
-        print("Hello terminal!")
+      # This program is going to help the user find the addition of two numbers as well as their square value
+      
+      
+      # The two variables below will take input of the user's numbers
+      number1 = input("What is your 1st number? ")
+      number2 = input("What is your 2nd number? ")
+      
+      
+      # The function below adds the numbers that the user has input above
+      def add_func():
+          add_value = int(number1) + int(number2)
+          print(number1, "+", number2, "=", add_value)
+      
+      # In the below function it is finding the square value of the number
+      def square_func (number):
+          square_value = int(number) * int(number)
+          print("The square value of", number, "is", square_value)
+      
+      
+      # Here I am calling the function and telling the user what the answer is
+      add_func()
+      
+      # Here I am calling the function above to tell the user what the square value of the numbers are
+      square_func(int(number1))
+      square_func(int(number2))
     </script>
   </div>  
 </body>
