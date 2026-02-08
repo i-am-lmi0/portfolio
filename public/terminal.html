@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnav's CLI Portfolio Terminal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background: #1a1a1a;
+            color: #00ff00;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #00ff00;
+            font-family: 'Courier New', monospace;
+        }
+
+        .nav-brand {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: #00ff00;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid #00ff00;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            background: transparent;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .nav-link:hover {
+            background: #00ff00;
+            color: #1a1a1a;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .terminal-container {
+            background: #0a0a0a;
+            border: 2px solid #00ff00;
+            border-radius: 8px;
+            max-width: 900px;
+            width: 100%;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Courier New', monospace;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+        }
+
+        .terminal-header {
+            background: #1a1a1a;
+            border-bottom: 1px solid #00ff00;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .terminal-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .close {
+            background: #ff5f56;
+        }
+
+        .minimize {
+            background: #ffbd2e;
+        }
+
+        .maximize {
+            background: #27c93f;
+        }
+
+        .terminal-title {
+            color: #00ff00;
+            font-size: 14px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .terminal-body {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            color: #00ff00;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .terminal-line {
+            margin-bottom: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .terminal-line.input {
+            color: #ffffff;
+        }
+
+        .terminal-line.output {
+            color: #00ff00;
+        }
+
+        .terminal-input-line {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .prompt {
+            color: #00ff00;
+            margin-right: 5px;
+        }
+
+        .terminal-input {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            outline: none;
+            flex: 1;
+        }
+
+        .terminal-input::selection {
+            background: #00ff00;
+            color: #0a0a0a;
+        }
+
+        /* Scrollbar styling */
+        .terminal-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .terminal-body::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+
+        .terminal-body::-webkit-scrollbar-thumb {
+            background: #00ff00;
+            border-radius: 4px;
+        }
+
+        .terminal-body::-webkit-scrollbar-thumb:hover {
+            background: #00cc00;
+        }
+
+        /* Blinking cursor effect */
+        .terminal-input::after {
+            content: '_';
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Arnav's Portfolio</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link active">CLI Terminal</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="button close"></span>
+                    <span class="button minimize"></span>
+                    <span class="button maximize"></span>
+                </div>
+                <div class="terminal-title">arnav-portfolio-terminal</div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-line output">Welcome to Arnav's Interactive CLI Portfolio</div>
+                <div class="terminal-line output">Type "help" to see available commands</div>
+                <div class="terminal-line input">visitor@arnav-portfolio:~$ </div>
+                <form id="terminal-form" class="terminal-input-line">
+                    <span class="prompt">visitor@arnav-portfolio:~$ </span>
+                    <input type="text" id="terminal-input" class="terminal-input" autofocus>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const commands = {
+            help: {
+                description: 'Show available commands',
+                response: `Available commands:
+  help     - Show this help message
+  about    - Learn about Arnav
+  skills   - View technical skills
+  hobbies  - See personal interests
+  projects - View featured projects
+  contact  - Get contact information
+  clear    - Clear terminal screen`
+            },
+            about: {
+                description: 'Learn about Arnav',
+                response: 'About Arnav: [Your about information here - add your personal details]'
+            },
+            skills: {
+                description: 'View technical skills',
+                response: 'Technical Skills:\n  • JavaScript/React\n  • Python\n  • Node.js\n  • [Add your skills here]'
+            },
+            hobbies: {
+                description: 'See personal interests',
+                response: 'Hobbies & Interests:\n  • [Add your hobbies here]\n  • [Add more interests]'
+            },
+            projects: {
+                description: 'View featured projects',
+                response: 'Featured Projects:\n  • [Project 1] - [Brief description]\n  • [Project 2] - [Brief description]'
+            },
+            contact: {
+                description: 'Get contact information',
+                response: 'Contact Information:\n  Email: [your-email@example.com]\n  GitHub: [your-github]\n  LinkedIn: [your-linkedin]'
+            },
+            clear: {
+                description: 'Clear terminal screen',
+                response: null
+            }
+        };
+
+        const terminalBody = document.getElementById('terminal-body');
+        const terminalForm = document.getElementById('terminal-form');
+        const terminalInput = document.getElementById('terminal-input');
+
+        function addTerminalLine(text, type = 'output') {
+            const line = document.createElement('div');
+            line.className = `terminal-line ${type}`;
+            line.textContent = text;
+            terminalBody.insertBefore(line, terminalForm);
+        }
+
+        function scrollToBottom() {
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+
+        terminalForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const input = terminalInput.value.trim();
+            
+            if (!input) return;
+
+            addTerminalLine(`visitor@arnav-portfolio:~$ ${input}`, 'input');
+
+            const command = input.toLowerCase();
+
+            if (commands[command]) {
+                if (command === 'clear') {
+                    const lines = terminalBody.querySelectorAll('.terminal-line');
+                    lines.forEach(line => line.remove());
+                    addTerminalLine('Terminal cleared. Type "help" to see available commands');
+                } else {
+                    addTerminalLine(commands[command].response);
+                }
+            } else {
+                addTerminalLine(`Command not found: ${command}. Type "help" to see available commands.`);
+            }
+
+            terminalInput.value = '';
+            scrollToBottom();
+        });
+
+        terminalBody.addEventListener('click', () => {
+            terminalInput.focus();
+        });
+
+        scrollToBottom();
+    </script>
+</body>
+</html>

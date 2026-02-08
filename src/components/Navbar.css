@@ -1,0 +1,46 @@
+.navbar {
+  background: #1a1a1a;
+  color: #00ff00;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #00ff00;
+  font-family: 'Courier New', monospace;
+}
+
+.nav-brand {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #00ff00;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.nav-link:hover {
+  background: #00ff00;
+  color: #1a1a1a;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+.nav-link.active {
+  background: #00ff00;
+  color: #1a1a1a;
+  box-shadow: 0 0 10px #00ff00;
+}
