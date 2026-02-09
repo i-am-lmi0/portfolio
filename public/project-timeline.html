@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <link rel="icon" href="./img/logo.png" type="image/png">
+  <title>Project Timeline - Arnav's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .timeline {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    
+    .timeline-item {
+      background: rgba(255, 255, 255, 0.1);
+      border-left: 4px solid #00ff00;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      position: relative;
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .timeline-date {
+      color: #00ff00;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .timeline-title {
+      color: #ffffff;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .timeline-description {
+      color: #cccccc;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    
+    .timeline-link {
+      color: #00ff00;
+      text-decoration: none;
+      border: 1px solid #00ff00;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    
+    .timeline-link:hover {
+      background: #00ff00;
+      color: #000000;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+    
+    .timeline-status {
+      color: #ffff00;
+      font-style: italic;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    
+    .page-title {
+      text-align: center;
+      margin: 2rem 0;
+      color: #ffffff;
+      font-size: 2.5rem;
+    }
+    
+    .timeline-intro {
+      text-align: center;
+      color: #cccccc;
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="left-buttons">
+      <a href="index.html" class="button">Home</a>
+      <a href="about-me.html" class="button">About Me</a>
+      <a href="services.html" class="button">Services</a>
+      <a href="project-timeline.html" class="button">Project Timeline</a>
+    </div>
+    <div class="link-navbar">
+      <a href="https://github.com/i-am-lmi0" target="_blank" class="link">
+        My GitHub
+      </a>
+      <a href="mailto:arnav@somaghatta.com" class="link">
+        Contact Me
+      </a>
+    </div>
+  </div>
+  
+  <div class="container">
+    <h1 class="page-title">Project Timeline</h1>
+    <p class="timeline-intro">A journey through my development projects. All projects are currently maintained and updated.</p>
+    
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">February 2026</div>
+        <div class="timeline-title">Reverse Proxy Website</div>
+        <div class="timeline-description">
+          Developed and designed a reverse proxy service to provide a secure browsing experience. 
+          This project allows users to browse the internet securely through a proxy server instead of their native browser
+        </div>
+        <a href="https://proxy.somaghatta.com" target="_blank" class="timeline-link">View Project</a>
+        <div class="timeline-status">Currently maintained and actively updated!</div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-date">May 2025</div>
+        <div class="timeline-title">Discord Bot Development</div>
+        <div class="timeline-description">
+          Created a multi functional Discord bot for the Duck Paradise Discord server and many other communities. 
+          Features include moderation, entertainment commands, utility functions, server management tools, and more.
+        </div>
+        <a href="https://discord.gg/DuckParadise" target="_blank" class="timeline-link">Join Discord Server</a>
+        <div class="timeline-status">Currently maintained and actively updated!</div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-date">August 2024</div>
+        <div class="timeline-title">Personal Portfolio Website</div>
+        <div class="timeline-description">
+          Designed and developed my personal portfolio website to showcase my projects and skills. 
+          Built with modern web technologies and responsive design principles.
+        </div>
+        <a href="https://arnav.somaghatta.com" target="_blank" class="timeline-link">View Website</a>
+        <div class="timeline-status">Currently maintained and actively updated!</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
