@@ -7,6 +7,114 @@
   <link rel="icon" href="./img/logo.png" type="image/png">
   <title>About Me!</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    
+    .about-section {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(20, 20, 40, 0.6) 100%);
+      border: 2px solid #f09235;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .about-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(240, 146, 53, 0.3);
+      border-color: #ff6b6b;
+    }
+    
+    .about-section h2 {
+      color: #f09235;
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .about-section h2::before {
+      font-size: 28px;
+    }
+    
+    .about-section p {
+      color: #f09235;
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .skill-item {
+      background: rgba(240, 146, 53, 0.1);
+      border: 1px solid #f09235;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .skill-item:hover {
+      background: rgba(240, 146, 53, 0.2);
+      transform: scale(1.05);
+    }
+    
+    .skill-name {
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    
+    .skill-level {
+      color: #cccccc;
+      font-size: 14px;
+    }
+    
+    .fun-fact {
+      background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(240, 146, 53, 0.1) 100%);
+      border-left: 4px solid #ff6b6b;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      font-style: italic;
+    }
+    
+    .emoji {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .about-content {
+        padding: 0 20px;
+      }
+      
+      .about-section {
+        padding: 20px;
+      }
+      
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="navbar">
@@ -25,16 +133,72 @@
       </a>
     </div>
   </div>
+  
   <div class="container">
-    <h1 class="header">About Me</h1>
-    <p class="description">
-      Hello! My name is Arnav and I am in 8th grade. <br><br>
-      I love playing video games. 
-      I also code a lot and do enjoy it as well. <br>
-      I mainly code in Python but am learning HTML, Javascript, and CSS with this site. 
-      I speak English and am learning to speak French in school. <br>
-      <br>
-    </p>
+    <div class="about-content">
+      <div class="about-section">
+        <h2>Hey There! My name is Arnav</h2>
+        <p>
+          Welcome to my website! I am an 8th grade developer who loves making all sorts of things using code! 
+          When I'm not debugging or building something really cool, you'll find me exploring new technologies like AI or gaming with my friends.
+        </p>
+        <p>
+          My coding journey started with Python, but I have expanded my skillset to include web development with a little HTML and CSS - 
+          which I'm using to build this very website you're looking at right now!
+        </p>
+      </div>
+      
+      <div class="about-section">
+        <h2>My Skills</h2>
+        <p>
+          Here is my skillset. This is always growing as I learn new things!
+        </p>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-name">Python</div>
+            <div class="skill-level">Automation, scripting, async programming</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Discord Bots</div>
+            <div class="skill-level">Commands, events, rate-limit aware design</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">HTML/CSS</div>
+            <div class="skill-level">Responsive layouts, semantic HTML, modern CSS layout</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">MongoDB</div>
+            <div class="skill-level">Schema design for documents, connecting from apps/bots</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Minecraft Development</div>
+            <div class="skill-level">Plugin/mod configuration, performance tuning, backups</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Server Administration</div>
+            <div class="skill-level">Linux/Windows, troubleshooting, automation</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Networking</div>
+            <div class="skill-level">IP/DNS, routing/VLAN basics, firewalling concepts</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Hardware Assembly</div>
+            <div class="skill-level">PC/server builds, parts selection, upgrades</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-section">
+        <h2>Outside of Coding</h2>
+        <p>
+          Outside of coding, I am a red belt in karate, which shows my discipline and commitment to long term training. 
+          I also play table tennis, highlighting my hand eye coordination and fast reflexes.
+          Additionally, I play the violin, reflecting my enjoyment of performing and my appreciation for classical music.
+        </p>
+      </div>
+      
+    </div>
   </div>
 </body>
 </html>
