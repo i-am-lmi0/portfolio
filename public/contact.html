@@ -23,12 +23,12 @@
   
   <div class="container">
     <div class="contact-content">
+      <h1 class="header">Get In Touch</h1>
+      
       <div class="local-time">
         <h3>Local Time</h3>
         <p id="current-time">Loading...</p>
       </div>
-      
-      <h1 class="header">Get In Touch</h1>
       
       <div class="contact-grid">
         <div class="contact-item">
@@ -95,7 +95,7 @@
   
   <style>
     .contact-content {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
       text-align: center;
     }
@@ -106,13 +106,13 @@
     
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
       margin-bottom: 40px;
     }
     
     .contact-item {
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(20, 20, 40, 0.6) 100%);
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(20, 20, 40, 0.4) 100%);
       border: 2px solid #f09235;
       border-radius: 15px;
       padding: 40px;
@@ -166,7 +166,7 @@
     }
     
     .local-time {
-      background: linear-gradient(135deg, rgba(240, 146, 53, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%);
+      background: linear-gradient(135deg, rgba(240, 146, 53, 0.05) 0%, rgba(255, 107, 107, 0.05) 100%);
       border: 2px solid #f09235;
       border-radius: 15px;
       padding: 25px;
@@ -191,6 +191,11 @@
     }
     
     @media (max-width: 768px) {
+      .contact-content {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+      
       .contact-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -221,6 +226,10 @@
     }
     
     @media (max-width: 480px) {
+      .contact-content {
+        padding: 0 15px;
+      }
+      
       .contact-grid {
         gap: 15px;
       }
