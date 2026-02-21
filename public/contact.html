@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <link rel="icon" href="./img/logo.png" type="image/png">
+  <title>Contact Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar">
+    <div class="left-buttons">
+      <a href="index.html" class="button">Home</a>
+      <a href="about-me.html" class="button">About Me</a>
+      <a href="services.html" class="button">Services</a>
+      <a href="project-timeline.html" class="button">Project Timeline</a>
+    </div>
+    <div class="link-navbar">
+      <a href="contact.html" class="link">Contact Me</a>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="contact-content">
+      <h1 class="header">Get In Touch</h1>
+      
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <a href="mailto:arnav@somaghatta.com" class="contact-link">arnav@somaghatta.com</a>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">💻</div>
+          <div class="contact-info">
+            <h3>GitHub</h3>
+            <a href="https://github.com/i-am-lmi0" target="_blank" class="contact-link">github.com/i-am-lmi0</a>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">🎮</div>
+          <div class="contact-info">
+            <h3>Discord</h3>
+            <a href="https://discord.com/users/1059882387590365314" target="_blank" class="contact-link">Discord Profile</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="local-time">
+        <h3>🕐 Local Time</h3>
+        <p id="current-time">Loading...</p>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function updateTime() {
+      const now = new Date();
+      const options = {
+        timeZone: 'America/New_York',
+        hour12: true,
+        hour: 'numeric',
+        minute: '2-digit',
+        second: '2-digit',
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      };
+      
+      const timeString = now.toLocaleString('en-US', options);
+      document.getElementById('current-time').textContent = timeString;
+    }
+    
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+  
+  <style>
+    .contact-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .contact-item {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(20, 20, 40, 0.6) 100%);
+      border: 2px solid #f09235;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .contact-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(240, 146, 53, 0.3);
+      border-color: #ff6b6b;
+    }
+    
+    .contact-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+    
+    .contact-info h3 {
+      color: #f09235;
+      font-size: 20px;
+      margin-bottom: 10px;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .contact-link {
+      color: #f09235;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+      padding: 8px 16px;
+      border: 2px solid #f09235;
+      border-radius: 25px;
+      background: rgba(240, 146, 53, 0.1);
+    }
+    
+    .contact-link:hover {
+      background: #f09235;
+      color: #000000;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(240, 146, 53, 0.5);
+    }
+    
+    .local-time {
+      background: linear-gradient(135deg, rgba(240, 146, 53, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%);
+      border: 2px solid #f09235;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .local-time h3 {
+      color: #f09235;
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .local-time p {
+      color: #f09235;
+      font-size: 16px;
+      font-weight: 600;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .contact-item {
+        padding: 20px;
+      }
+      
+      .contact-icon {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+      
+      .contact-info h3 {
+        font-size: 18px;
+      }
+      
+      .contact-link {
+        font-size: 14px;
+        padding: 6px 12px;
+      }
+      
+      .local-time {
+        padding: 20px;
+        margin-top: 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .contact-grid {
+        gap: 15px;
+      }
+      
+      .contact-item {
+        padding: 15px;
+      }
+      
+      .contact-icon {
+        font-size: 32px;
+        margin-bottom: 8px;
+      }
+      
+      .contact-info h3 {
+        font-size: 16px;
+      }
+      
+      .contact-link {
+        font-size: 13px;
+        padding: 5px 10px;
+      }
+      
+      .local-time {
+        padding: 15px;
+      }
+    }
+  </style>
+</body>
+</html>
