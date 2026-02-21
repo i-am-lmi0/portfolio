@@ -23,11 +23,18 @@
   
   <div class="container">
     <div class="contact-content">
+      <div class="local-time">
+        <h3>Local Time</h3>
+        <p id="current-time">Loading...</p>
+      </div>
+      
       <h1 class="header">Get In Touch</h1>
       
       <div class="contact-grid">
         <div class="contact-item">
-          <div class="contact-icon">📧</div>
+          <div class="contact-icon">
+            <img src="./img/email.png" alt="Email" class="contact-logo">
+          </div>
           <div class="contact-info">
             <h3>Email</h3>
             <a href="mailto:arnav@somaghatta.com" class="contact-link">arnav@somaghatta.com</a>
@@ -35,7 +42,9 @@
         </div>
         
         <div class="contact-item">
-          <div class="contact-icon">💻</div>
+          <div class="contact-icon">
+            <img src="./img/github.png" alt="GitHub" class="contact-logo">
+          </div>
           <div class="contact-info">
             <h3>GitHub</h3>
             <a href="https://github.com/i-am-lmi0" target="_blank" class="contact-link">github.com/i-am-lmi0</a>
@@ -43,17 +52,14 @@
         </div>
         
         <div class="contact-item">
-          <div class="contact-icon">🎮</div>
+          <div class="contact-icon">
+            <img src="./img/discord.webp" alt="Discord" class="contact-logo">
+          </div>
           <div class="contact-info">
             <h3>Discord</h3>
-            <a href="https://discord.com/users/1059882387590365314" target="_blank" class="contact-link">Discord Profile</a>
+            <a href="https://discord.com/users/1059882387590365314" target="_blank" class="contact-link">theofficialtruck</a>
           </div>
         </div>
-      </div>
-      
-      <div class="local-time">
-        <h3>🕐 Local Time</h3>
-        <p id="current-time">Loading...</p>
       </div>
     </div>
   </div>
@@ -61,31 +67,41 @@
   <script>
     function updateTime() {
       const now = new Date();
-      const options = {
+      
+      const dateOptions = {
         timeZone: 'America/New_York',
-        hour12: true,
-        hour: 'numeric',
-        minute: '2-digit',
-        second: '2-digit',
-        weekday: 'long',
         year: 'numeric',
         month: 'long',
         day: 'numeric'
       };
       
-      const timeString = now.toLocaleString('en-US', options);
-      document.getElementById('current-time').textContent = timeString;
+      const timeOptions = {
+        timeZone: 'America/New_York',
+        hour12: true,
+        hour: 'numeric',
+        minute: '2-digit'
+      };
+      
+      const dateString = now.toLocaleString('en-US', dateOptions);
+      const timeString = now.toLocaleString('en-US', timeOptions);
+      
+      document.getElementById('current-time').innerHTML = 
+        `${dateString}<br>${timeString}`;
     }
     
     updateTime();
-    setInterval(updateTime, 1000);
+    setInterval(updateTime, 60000);
   </script>
   
   <style>
     .contact-content {
       max-width: 800px;
       margin: 0 auto;
-      text-align: left;
+      text-align: center;
+    }
+    
+    .header {
+      text-align: center !important;
     }
     
     .contact-grid {
@@ -99,7 +115,7 @@
       background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(20, 20, 40, 0.6) 100%);
       border: 2px solid #f09235;
       border-radius: 15px;
-      padding: 30px;
+      padding: 40px;
       text-align: center;
       transition: all 0.3s ease;
       backdrop-filter: blur(10px);
@@ -112,8 +128,13 @@
     }
     
     .contact-icon {
-      font-size: 48px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .contact-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
     }
     
     .contact-info h3 {
@@ -150,7 +171,7 @@
       border-radius: 15px;
       padding: 25px;
       text-align: center;
-      margin-top: 30px;
+      margin-bottom: 40px;
     }
     
     .local-time h3 {
@@ -166,6 +187,7 @@
       font-size: 16px;
       font-weight: 600;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      line-height: 1.4;
     }
     
     @media (max-width: 768px) {
@@ -175,12 +197,12 @@
       }
       
       .contact-item {
-        padding: 20px;
+        padding: 30px;
       }
       
-      .contact-icon {
-        font-size: 36px;
-        margin-bottom: 10px;
+      .contact-logo {
+        width: 36px;
+        height: 36px;
       }
       
       .contact-info h3 {
@@ -194,7 +216,7 @@
       
       .local-time {
         padding: 20px;
-        margin-top: 20px;
+        margin-bottom: 20px;
       }
     }
     
@@ -204,12 +226,12 @@
       }
       
       .contact-item {
-        padding: 15px;
+        padding: 25px;
       }
       
-      .contact-icon {
-        font-size: 32px;
-        margin-bottom: 8px;
+      .contact-logo {
+        width: 32px;
+        height: 32px;
       }
       
       .contact-info h3 {
