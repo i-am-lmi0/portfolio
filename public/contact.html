@@ -6,7 +6,11 @@
   <link rel="stylesheet" href="index.css" type="text/css">
   <link rel="icon" href="./img/logo.png" type="image/png">
   <title>Contact Me</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .contact-content {
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
   <div class="navbar">
@@ -58,7 +62,7 @@
         
         <div class="contact-item">
           <div class="contact-icon">
-            <img src="./img/discord.webp" alt="Discord" class="contact-logo" onerror="this.src='./img/discord.png'; this.onerror='function(){};'">
+            <img src="./img/discord.webp" alt="Discord" class="contact-logo">
           </div>
           <div class="contact-info">
             <h3>Discord</h3>
@@ -98,182 +102,6 @@
     setInterval(updateTime, 60000);
   </script>
   
-  <style>
-    .contact-content {
-      max-width: 1600px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    
-    .header {
-      text-align: center !important;
-    }
-    
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-      gap: 30px;
-      margin-bottom: 40px;
-    }
-    
-    .contact-item {
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(20, 20, 40, 0.4) 100%);
-      border: 2px solid #f09235;
-      border-radius: 15px;
-      padding: 40px;
-      text-align: center;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
-      position: relative;
-      z-index: 1;
-    }
-    
-    .contact-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(240, 146, 53, 0.3);
-      border-color: #ff6b6b;
-      z-index: 2;
-    }
-    
-    .contact-icon {
-      margin-bottom: 20px;
-      min-height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .contact-logo {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
-      background: rgba(240, 146, 53, 0.2);
-      border: 1px solid rgba(240, 146, 53, 0.3);
-      border-radius: 8px;
-      padding: 8px;
-    }
-    
-    .contact-info h3 {
-      color: #f09235;
-      font-size: 20px;
-      margin-bottom: 10px;
-      font-weight: 700;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    
-    .contact-link {
-      color: #f09235;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      display: inline-block;
-      padding: 8px 16px;
-      border: 2px solid #f09235;
-      border-radius: 25px;
-      background: rgba(240, 146, 53, 0.1);
-    }
-    
-    .contact-link:hover {
-      background: #f09235;
-      color: #000000;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(240, 146, 53, 0.5);
-    }
-    
-    .local-time {
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(20, 20, 40, 0.4) 100%);
-      border: 2px solid #f09235;
-      border-radius: 15px;
-      padding: 25px;
-      text-align: center;
-      margin-bottom: 40px;
-      width: 100%;
-    }
-    
-    .local-time h3 {
-      color: #f09235;
-      font-size: 18px;
-      margin-bottom: 15px;
-      font-weight: 700;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    
-    .local-time p {
-      color: #f09235;
-      font-size: 16px;
-      font-weight: 600;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-      line-height: 1.4;
-    }
-    
-    @media (max-width: 768px) {
-      .contact-content {
-        max-width: 100%;
-        padding: 0 20px;
-      }
-      
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-      
-      .contact-item {
-        padding: 30px;
-      }
-      
-      .contact-logo {
-        width: 36px;
-        height: 36px;
-      }
-      
-      .contact-info h3 {
-        font-size: 18px;
-      }
-      
-      .contact-link {
-        font-size: 14px;
-        padding: 6px 12px;
-      }
-      
-      .local-time {
-        padding: 20px;
-        margin-bottom: 20px;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .contact-content {
-        padding: 0 15px;
-      }
-      
-      .contact-grid {
-        gap: 15px;
-      }
-      
-      .contact-item {
-        padding: 25px;
-      }
-      
-      .contact-logo {
-        width: 32px;
-        height: 32px;
-      }
-      
-      .contact-info h3 {
-        font-size: 16px;
-      }
-      
-      .contact-link {
-        font-size: 13px;
-        padding: 5px 10px;
-      }
-      
-      .local-time {
-        padding: 15px;
-      }
-    }
-  </style>
   <script src="menu.js"></script>
 </body>
 </html>
