@@ -10,19 +10,25 @@
 </head>
 <body>
   <div class="navbar">
-    <div class="left-buttons">
-      <a href="index.html" class="button">Home</a>
-      <a href="about-me.html" class="button">About Me</a>
-      <a href="services.html" class="button">Services</a>
-      <a href="project-timeline.html" class="button">Project Timeline</a>
-    </div>
-    <div class="link-navbar">
-      <a href="contact.html" class="link">Contact Me</a>
+    <div class="navbar-container">
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about-me.html" class="nav-item">About Me</a>
+        <a href="services.html" class="nav-item">Services</a>
+        <a href="project-timeline.html" class="nav-item">Project Timeline</a>
+        <a href="contact.html" class="nav-item contact-btn">Contact Me</a>
+      </div>
     </div>
   </div>
   <div class="container" class="column"> 
     <h1 class="header">Arnav Somaghatta</h1>
     <p class="description">"Nothing is impossible, if you just try."</p>
   </div>
+  <script src="menu.js"></script>
 </body>
 </html>
