@@ -11,7 +11,18 @@
   <title>Arnav's Portfolio</title>
 </head>
 <body>
-  <div class="navbar">
+  <div id="splash-screen" class="splash-screen">
+    <div class="tv-frame">
+      <div class="tv-screen">
+        <div class="tv-content">
+          <h1 class="tv-name"><span id="rotating-hello" class="blue-underlined">Hello</span>,<br>I'm Arnav Somaghatta</h1>
+          <p class="tv-description">"Nothing is impossible, if you just try."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar" id="main-navbar">
     <div class="navbar-container">
       <button class="menu-toggle" aria-label="Toggle navigation">
         <span class="bar"></span>
@@ -27,10 +38,37 @@
       </div>
     </div>
   </div>
-  <div class="container"> 
-    <h1 class="header">Arnav Somaghatta</h1>
-    <p class="description">"Nothing is impossible, if you just try."</p>
-  </div>
+
   <script src="menu.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const splashScreen = document.getElementById('splash-screen');
+      const rotatingHello = document.getElementById('rotating-hello');
+
+      const hellos = [
+        "Hello", "Hola", "Bonjour", "Ciao", "Hallo", "Olá", "Hej", "Hei", "Cześć", "Ahoj", "Szia", "Yasou", "Privet", "Pryvit", "Marhaba", "Shalom", "Merhaba", "Salam", "Namaste","Nomoskar", "Ni hao", "Konnichiwa", "Annyeong", "Jambo", "Sawubona", "Aloha"
+      ];
+      let currentHelloIndex = 0;
+
+      function rotateHello() {
+        rotatingHello.style.opacity = '0';
+        setTimeout(() => {
+          currentHelloIndex = (currentHelloIndex + 1) % hellos.length;
+          rotatingHello.textContent = hellos[currentHelloIndex];
+          rotatingHello.style.opacity = '1';
+        }, 300);
+      }
+
+      setTimeout(() => {
+        setInterval(rotateHello, 1500);
+      }, 2500);
+
+      setTimeout(() => {
+        splashScreen.style.zIndex = '1';
+        
+        window.dispatchEvent(new Event('resize'));
+      }, 3500);
+    });
+  </script>
 </body>
 </html>
