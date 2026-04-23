@@ -2,7 +2,7 @@
   "name": "arnav-coding",
   "version": "1.0.0",
   "description": "This repository is for a coding portfolio for me.",
-  "main": "public/index.html",
+  "main": "public/home/index.html",
   "scripts": {
     "start": "npx http-server public -p 8082 -o",
     "build": "echo 'Static site - no build needed'"
